@@ -1,0 +1,51 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+<a href="{% url 'experience_create' %}">+ New Experience Post</a>
+<br>
+<form method="get" action="{% url 'experience' %}">
+    <label>
+        <input type="text" name="q" placeholder="search for title..." value="{{search_query}}">
+    </label>
+    <button type="button">Search</button>
+</form>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Category</th>
+            <th>Created at</th>
+            <th>Added by</th>
+            <th>View</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for experience in experiences %}   
+        <tr>
+            <td>{{experience.title}}</td>
+            <td>{{experience.content}}</td>
+            <td>{{experience.category}}</td>
+            <td>{{experience.created_at | date:"M d, Y"}}</td>
+            <td>{{experience.user}}</td>
+            <td><a href="{% url 'experience_detail' experience.pk %}">View</a></td>
+            <td><a href="{% url 'experience_update' experience.pk %}">Update</a></td>
+            <td><a href="{% url 'experience_delete' experience.pk %}">Delete</a></td>
+        </tr>
+        {% empty %}
+            <tr>
+                <td colspan="8">No experience found.</td>
+            </tr>
+     {% endfor %}   
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Total</td>
+            <td colspan="3">{{total_experiences}}</td>
+            <td>{{total_users}}</td>
+        </tr>
+    </tfoot>
+</table>
+{% endblock content %}

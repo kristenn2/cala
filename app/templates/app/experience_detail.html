@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+
+        <div class="post-entry">
+            <h2><a href="">{{experience.title}}</a> </h2>
+            <p>{{experience.content}}</p>
+        </div>
+        <a href="{% url 'experience_update' experience.pk %}">+ Edit Blog</a>
+        <a href="{% url 'experience_delete' experience.pk %}">- Delete Blog</a>
+{% endblock content %}
