@@ -1,7 +1,7 @@
 {% extends 'app/base.html' %}
 {% load static %}
 {% block content %}
-    <h1>Edit Post</h1>
+    <h1>Delete Post</h1>
     <form action="{% url 'experience_delete' object.pk %}" method="post">
       {% csrf_token %}
       <p> Are you sure you want to delete" {{experience.title}}"?</p>

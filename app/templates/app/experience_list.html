@@ -1,13 +1,13 @@
 {% extends 'app/base.html' %}
 {% load static %}
 {% block content %}
-<a href="{% url 'experience_create' %}">+ New Experience Post</a>
+<center><a href="{% url 'experience_create' %}">+ New Experience Post</a></center>
 <br>
 <form method="get" action="{% url 'experience' %}">
     <label>
         <input type="text" name="q" placeholder="search for title..." value="{{search_query}}">
     </label>
-    <button type="button">Search</button>
+    <button type="submit">Search</button>
 </form>
 <table>
     <thead>

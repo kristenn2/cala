@@ -55,3 +55,494 @@ table, th, td {
     border-collapse: collapse;
     margin: 20px 0px 20px 0px;
 }
+/* ===============================
+   General page spacing
+   =============================== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffffff, #41AB5D);
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ===============================
+   Login & Signup forms
+   =============================== */
+form {
+    max-width: 400px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #41AB5D;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2f8e4c;
+}
+
+/* ===============================
+   Auth messages & errors
+   =============================== */
+.errorlist {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.helptext {
+    font-size: 0.9rem;
+    color: #555;
+}
+/* ===============================
+   Header navigation layout
+   =============================== */
+header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    background-color: #ffffff;
+}
+
+/* Push Login / Sign Up to the right */
+header a:nth-last-child(2),
+header a:nth-last-child(1) {
+    margin-left: auto;
+}
+
+/* Prevent both links from stacking */
+header a:nth-last-child(1) {
+    margin-left: 1rem;
+}
+
+/* Active hover improvement */
+header a {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+}
+
+header a:hover {
+    border-bottom: 2px solid darkred;
+}
+/* ===============================
+   Page content spacing
+   =============================== */
+body {
+    background-color: #f5f7fa;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+/* ===============================
+   Home & About pages
+   =============================== */
+.mylogo {
+    display: block;
+    margin-top: 20px;
+}
+
+/* ===============================
+   Login & Signup forms
+   =============================== */
+form {
+    max-width: 420px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-top: 20px;
+}
+
+form .container {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #41AB5D;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2f8e4c;
+}
+
+/* ===============================
+   Blog (Experience List)
+   =============================== */
+a[href*="experience_create"] {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #41AB5D;
+}
+
+a[href*="experience_create"]:hover {
+    text-decoration: underline;
+}
+
+/* Search form */
+form[action*="experience"] {
+    margin-bottom: 20px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    display: inline;
+}
+
+/* Table improvements */
+table {
+    width: 100%;
+    background: #ffffff;
+}
+
+th {
+    background-color: #41AB5D;
+    color: white;
+}
+
+td, th {
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Action links */
+table a {
+    text-decoration: none;
+    color: #5E5694;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+/* ===============================
+   Experience Detail Page
+   =============================== */
+.post-entry {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.post-entry p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.post-entry h2 a {
+    font-size: 1.5rem;
+}
+
+/* Edit / Delete links */
+a[href*="experience_update"],
+a[href*="experience_delete"] {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a[href*="experience_update"] {
+    color: #2563eb;
+}
+
+a[href*="experience_delete"] {
+    color: #dc2626;
+}
+
+a[href*="experience_update"]:hover,
+a[href*="experience_delete"]:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   Experience Create & Update Forms
+   =============================== */
+form[action*="experience_create"],
+form[action*="experience_update"] {
+    max-width: 600px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* Form fields */
+form[action*="experience_create"] div,
+form[action*="experience_update"] p {
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Select & date */
+select,
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Submit buttons */
+input[type="submit"] {
+    background-color: #41AB5D;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2f8e4c;
+}
+
+/* Error messages */
+small {
+    display: block;
+    margin-top: 4px;
+}
+/* ===============================
+   Center Home, About, Blog, Login, Signup
+   =============================== */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* center horizontally */
+    background-color: #f5f7fa;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center headings on all pages */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Center Home logo */
+.mylogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+/* Center container for Login, Signup, Blog table, posts */
+.container,
+form:not([action*="experience_create"]):not([action*="experience_update"]),
+.post-entry,
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Center "New Experience Post" link and search bar */
+a[href*="experience_create"],
+form[action*="experience"]:not([action*="experience_create"]) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Keep Experience Create/Update forms LEFT aligned */
+form[action*="experience_create"],
+form[action*="experience_update"] {
+    margin-left: 0;
+    margin-right: 0;
+}
+/* ===============================
+   Experience Create & Update Forms - Vertical Layout
+   =============================== */
+form[action*="experience_create"],
+form[action*="experience_update"] {
+    display: flex;
+    flex-direction: column; /* stack all fields vertically */
+    justify-content: center;
+    align-items: stretch;   /* full width for inputs */
+    max-width: 420px;       /* same as login/signup */
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-top: 20px;
+}
+
+form[action*="experience_create"] div,
+form[action*="experience_update"] p {
+    display: flex;
+    flex-direction: column; /* each label + input stacked */
+    margin-bottom: 15px;
+}
+
+form[action*="experience_create"] label,
+form[action*="experience_update"] label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+form[action*="experience_create"] input,
+form[action*="experience_update"] input,
+form[action*="experience_create"] select,
+form[action*="experience_update"] select,
+form[action*="experience_create"] textarea,
+form[action*="experience_update"] textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+/* Center the submit button */
+input[type="submit"] {
+    width: 50%;
+    max-width: 200px;
+    background-color: #41AB5D;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #2f8e4c;
+}
+/* ===============================
+   Add spacing for Experience Create/Update forms
+   =============================== */
+form[action*="experience_create"] div,
+form[action*="experience_update"] p {
+    margin-bottom: 20px; /* adds space between fields */
+}
+
+form[action*="experience_create"] label,
+form[action*="experience_update"] label {
+    margin-bottom: 8px; /* space between label and input */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+    margin-top: 4px;
+}
+
+/* Add space above the submit button */
+input[type="submit"] {
+    margin-top: 15px;
+}
+/* ===============================
+   Remove white background from logout form
+   =============================== */
+form[action*="logout"] {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    display: inline; /* inline so it doesn't take full width */
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left;
+}
+/* General Page Styling */
+/* Container for your content */
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Logo Styling */
+.mylogo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the logo circular */
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.mylogo:hover {
+    transform: scale(1.1); /* Subtle zoom effect on hover */
+    border-color: #ffffff;
+}
+
+/* Simple Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

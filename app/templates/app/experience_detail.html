@@ -6,6 +6,6 @@
             <h2><a href="">{{experience.title}}</a> </h2>
             <p>{{experience.content}}</p>
         </div>
-        <a href="{% url 'experience_update' experience.pk %}">+ Edit Blog</a>
-        <a href="{% url 'experience_delete' experience.pk %}">- Delete Blog</a>
+        <center><a href="{% url 'experience_update' experience.pk %}">+ Edit Blog</a>
+        <a href="{% url 'experience_delete' experience.pk %}">- Delete Blog</a></center>
 {% endblock content %}
